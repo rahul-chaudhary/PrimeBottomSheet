@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottom-sheet.BottomSheetBehavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topPrimeCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:strokeWidth="0dp"
+            android:background="@drawable/card_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ImageView
+            android:id="@+id/primeCircle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginVertical="10dp"
+            android:elevation="10dp"
+            android:src="@drawable/orange_circle"
+            app:layout_constraintBottom_toTopOf="@+id/primeText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:elevation="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/crown"
+            app:layout_constraintBottom_toBottomOf="@id/primeCircle"
+            app:layout_constraintEnd_toEndOf="@id/primeCircle"
+            app:layout_constraintStart_toStartOf="@id/primeCircle"
+            app:layout_constraintTop_toTopOf="@id/primeCircle" />
+
+        <TextView
+            android:id="@+id/primeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="@string/extra_10_off_nwith_prime"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/primeCircle" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/offerCard"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="@color/orange"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primeText"
+            app:strokeWidth="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/only_at_rs_58_week"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/planCard"
+                android:layout_width="300dp"
+                android:layout_height="78dp"
+                android:layout_gravity="end|bottom"
+                android:layout_marginTop="20dp"
+                android:elevation="10dp"
+                app:cardBackgroundColor="@color/cream_orange"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/_1_month_plan_n_rs_245"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/offerTextColumn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+
+        <TextView
+            android:id="@+id/offerText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/save_at_least_400_in_every_booking"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:drawableStartCompat="@drawable/offer"
+            app:layout_constraintBottom_toTopOf="@+id/offerText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:id="@+id/spacer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/offerText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/offerText1" />
+
+        <TextView
+            android:id="@+id/offerText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/recover_prime_fee_in_first_booking_itself"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:drawableStartCompat="@drawable/rupee"
+            app:layout_constraintBottom_toBottomOf="@+id/offerTextColumn"
+            app:layout_constraintStart_toStartOf="@+id/offerText1"
+            app:layout_constraintTop_toBottomOf="@+id/spacer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/knowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/know_more"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="25dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/skipAndBook"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Skip &amp; Book"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/light_gray"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/orange"
+            android:drawableEnd="@drawable/baseline_arrow_forward_24"
+            android:elevation="2dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/be_prime"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

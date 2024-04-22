@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PrimeBottomSheet</string>
+    <string name="get_prime_now">Get Prime NOW!</string>
+    <string name="know_more"><u>Know More</u></string>
+    <string name="save_at_least_400_in_every_booking">Save at least <b>₹400</b> in every booking</string>
+    <string name="be_prime">Be Prime</string>
+    <string name="extra_10_off_nwith_prime"><b><font color="#FF5722">Extra 10%</font></b> off! \nwith Prime</string>
+    <string name="_1_month_plan_n_rs_245"><font color="#FF5722">1 month plan</font>\n<b>₹245/-</b></string>
+    <string name="only_at_rs_58_week"><b>Only at Rs.58</b>/week</string>
+    <string name="recover_prime_fee_in_first_booking_itself">Recover prime fee in first booking itself</string>
+
+</resources>
