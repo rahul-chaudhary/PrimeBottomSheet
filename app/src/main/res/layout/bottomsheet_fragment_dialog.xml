@@ -50,8 +50,8 @@
             android:id="@+id/offerCard"
             android:layout_width="300dp"
             android:layout_height="120dp"
-            app:cardBackgroundColor="@color/orange"
             android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/orange"
             app:cardCornerRadius="15dp"
             app:cardElevation="10dp"
 
@@ -99,9 +99,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="-79dp"
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="-79dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/offerCard">
 
@@ -172,8 +172,10 @@
                     android:layout_height="65dp"
                     android:layout_gravity="center"
                     android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Skip &amp; Book"
+                    android:text="@string/skip_amp_book"
                     android:textAlignment="center"
                     android:textColor="@color/orange"
                     android:textSize="18sp"
@@ -186,11 +188,14 @@
                     android:layout_height="match_parent" />
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bePrimeBtn"
                     android:layout_width="180dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/be_prime_gradient_btn"
+                    android:clickable="true"
                     android:drawableEnd="@drawable/baseline_arrow_forward_24"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_semibold"
                     android:paddingHorizontal="10dp"
                     android:text="@string/be_prime"

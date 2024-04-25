@@ -8,5 +8,6 @@
     <string name="_1_month_plan_n_rs_245"><font color="#FF5722">1 month plan</font>\n<b>₹245/-</b></string>
     <string name="only_at_rs_58_week"><b>Only at Rs.58</b>/week</string>
     <string name="recover_prime_fee_in_first_booking_itself">Recover prime fee in first booking itself</string>
+    <string name="skip_amp_book"><![CDATA[Skip & Book]]></string>
 
 </resources>
