@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.primebottomsheet.databinding.BottomsheetFragmentDialogBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.BaseTransientBottomBar.BaseCallback.DismissEvent
 
@@ -20,9 +21,7 @@ class PrimeDialogFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = BottomsheetFragmentDialogBinding.inflate(inflater, container, false)
-//        binding.skipAndBook.setOnClickListener {
-//            dismiss()
-//        }
+
         return binding.root
     }
 
@@ -37,13 +36,13 @@ class PrimeDialogFragment : BottomSheetDialogFragment() {
             Toast.makeText(requireContext(), "Skip and Book Clicked", Toast.LENGTH_SHORT).show()
             dismiss()
         }
-
         binding.bePrimeBtn.setOnClickListener {
             Toast.makeText(requireContext(), "Be Prime Button Clicked", Toast.LENGTH_SHORT).show()
         }
     }
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return BottomSheetDialog(requireContext(),R.style.BottomSheetStyle)
+        return BottomSheetDialog(requireContext(), R.style.BottomSheetStyle)
 
     }
 
