@@ -13,10 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         val bottomSheetFragment = PrimeDialogFragment()
         binding.bottomSheetLauncher.setOnClickListener {
-            Toast.makeText(it.context, "Bottom Sheet Clicked", Toast.LENGTH_SHORT).show()
-            bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
+            //conditional check to avoid multiple instances of the bottom sheet hence preventing the crashing of the app
+            if (!bottomSheetFragment.isAdded) {
+                Toast.makeText(it.context, "Bottom Sheet Clicked", Toast.LENGTH_SHORT).show()
+                bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
+            }
         }
-
 
     }
 }

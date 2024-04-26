@@ -11,6 +11,27 @@
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/transparent_white">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="55dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="55dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontal_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="220dp"/>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/imageCard"
             android:layout_width="match_parent"
@@ -21,6 +42,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/childConstraint"
             app:strokeWidth="0dp">
 
             <ImageView
@@ -35,7 +57,7 @@
             android:id="@+id/primeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center"
             android:text="@string/extra_10_off_nwith_prime"
@@ -50,14 +72,13 @@
             android:id="@+id/offerCard"
             android:layout_width="300dp"
             android:layout_height="120dp"
-            android:layout_marginTop="30dp"
             app:cardBackgroundColor="@color/orange"
             app:cardCornerRadius="15dp"
             app:cardElevation="10dp"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/primeText"
+            app:layout_constraintBottom_toBottomOf="@id/horizontal_guideline"
+            app:layout_constraintTop_toTopOf="@id/childConstraint"
             app:strokeWidth="0dp">
 
             <TextView
@@ -72,7 +93,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/planCard"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="78dp"
                 android:layout_gravity="end|bottom"
                 app:cardBackgroundColor="@color/cream_orange"
@@ -97,13 +118,15 @@
         </com.google.android.material.card.MaterialCardView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/childConstraint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-79dp"
             android:background="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/right_guide"
+            app:layout_constraintStart_toStartOf="@id/left_guide"
             app:layout_constraintTop_toBottomOf="@+id/offerCard">
+
 
             <TextView
                 android:id="@+id/offerText1"
@@ -116,13 +139,13 @@
                 android:text="@string/save_at_least_400_in_every_booking"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 app:drawableStartCompat="@drawable/offer"
                 app:layout_constraintBottom_toTopOf="@+id/offerText2"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
             <TextView
                 android:id="@+id/offerText2"
@@ -133,12 +156,11 @@
                 android:text="@string/recover_prime_fee_in_first_booking_itself"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 app:drawableStartCompat="@drawable/rupee"
                 app:layout_constraintBottom_toTopOf="@+id/knowMore"
-                app:layout_constraintStart_toStartOf="@+id/offerText1"
+                app:layout_constraintStart_toStartOf="@id/offerText1"
                 app:layout_constraintTop_toBottomOf="@+id/offerText1" />
-
 
             <TextView
                 android:id="@+id/knowMore"
@@ -217,5 +239,8 @@
         android:src="@drawable/crown_ic"
         app:layout_anchor="@+id/constraintLayout"
         app:layout_anchorGravity="top|center" />
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
