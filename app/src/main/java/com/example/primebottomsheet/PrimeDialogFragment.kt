@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.primebottomsheet.databinding.BottomsheetFragmentDialogBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.snackbar.BaseTransientBottomBar.BaseCallback.DismissEvent
 
 class PrimeDialogFragment : BottomSheetDialogFragment() {
     private lateinit var binding: BottomsheetFragmentDialogBinding
@@ -19,14 +20,22 @@ class PrimeDialogFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = BottomsheetFragmentDialogBinding.inflate(inflater, container, false)
+//        binding.skipAndBook.setOnClickListener {
+//            dismiss()
+//        }
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.knowMore.setOnClickListener {
+            Toast.makeText(requireContext(), "Know More Clicked", Toast.LENGTH_SHORT).show()
+        }
+
         binding.skipAndBook.setOnClickListener {
             Toast.makeText(requireContext(), "Skip and Book Clicked", Toast.LENGTH_SHORT).show()
+            dismiss()
         }
 
         binding.bePrimeBtn.setOnClickListener {
@@ -41,6 +50,7 @@ class PrimeDialogFragment : BottomSheetDialogFragment() {
     companion object {
         const val TAG = "ModalBottomSheet"
     }
+
 }
 //
 //binding = BottomsheetFragmentDialogBinding.inflate(layoutInflater)

@@ -10,7 +10,12 @@
     <color name="green">#038803</color>
     <color name="orange">#fd4513</color>
     <color name="orange_light">#fd4513</color>
+    <color name="orange_lighter">#f96201</color>
     <color name="orange_dark">#E23000</color>
+    <color name="orange_darker">#cb3315</color>
     <color name="cream_orange">#fff5ee</color>
+    <color name="orange_center">#e24501</color>
     <color name="transparent_white">#00FFFFFF</color>
+    <color name="lineStart">#fffad9</color>
+    <color name="lineEnd">#cab067</color>
 </resources>
