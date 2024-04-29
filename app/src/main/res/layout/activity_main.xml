@@ -3,24 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:backgroundTint="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bottomSheetLauncher"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/be_prime_gradient_btn"
-        android:text="@string/get_prime_now"
         android:fontFamily="@font/poppins_medium"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         android:paddingHorizontal="10dp"
+        android:text="@string/old_bottom_sheet"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottomSheetLauncher"
+        app:layout_constraintEnd_toStartOf="@+id/newBottomSheetLauncher"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/newBottomSheetLauncher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/be_prime_gradient_btn"
+        android:fontFamily="@font/poppins_medium"
+        android:textAllCaps="false"
+        android:paddingHorizontal="10dp"
+        android:text= "@string/new_bottom_sheet"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

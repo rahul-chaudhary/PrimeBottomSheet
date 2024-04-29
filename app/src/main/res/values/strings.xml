@@ -9,5 +9,9 @@
     <string name="only_at_rs_58_week"><b>Only at ₹58</b>/week</string>
     <string name="recover_prime_fee_in_first_booking_itself">Recover prime fee in first booking itself</string>
     <string name="skip_amp_book"><![CDATA[Skip & Book]]></string>
+    <string name="old_bottom_sheet">Old Bottom Sheet</string>
+    <string name="new_bottom_sheet">New Bottom Sheet</string>
+    <string name="prime_icon">Prime Icon</string>
+    <string name="background_image">Background Image</string>
 
 </resources>

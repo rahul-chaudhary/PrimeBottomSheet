@@ -15,11 +15,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val bottomSheetFragment = PrimeDialogFragment()
+        val newPrimeBottomSheet = NewPrimeBottomSheet()
         binding.bottomSheetLauncher.setOnClickListener {
             //conditional check to avoid multiple instances of the bottom sheet hence preventing the crashing of the app
             if (!bottomSheetFragment.isAdded) {
                 Toast.makeText(it.context, "Bottom Sheet Clicked", Toast.LENGTH_SHORT).show()
                 bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
+            }
+        }
+
+        binding.newBottomSheetLauncher.setOnClickListener {
+            //conditional check to avoid multiple instances of the bottom sheet hence preventing the crashing of the app
+            if (!bottomSheetFragment.isAdded) {
+                Toast.makeText(it.context, "New Bottom Sheet Clicked", Toast.LENGTH_SHORT).show()
+                newPrimeBottomSheet.show(supportFragmentManager, newPrimeBottomSheet.tag)
             }
         }
 
