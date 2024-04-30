@@ -30,7 +30,7 @@
         android:src="@drawable/img_1"
         app:layout_constraintBottom_toTopOf="@+id/bg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.41"
+        app:layout_constraintHeight_percent="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/roundedImageView" />
@@ -50,14 +50,13 @@
     <TextView
         android:id="@+id/primeText"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="@string/extra_10_off_nwith_prime"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/primeCircle" />
@@ -65,15 +64,13 @@
     <View
         android:id="@+id/divider"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
+        android:layout_height="2dp"
         android:background="@drawable/divider"
         app:layout_constraintBottom_toTopOf="@id/offerCard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/primeText"
+        app:layout_constraintVertical_bias="0.3"
         app:layout_constraintWidth_percent="0.5" />
 
     <com.google.android.material.card.MaterialCardView
@@ -149,8 +146,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="@string/know_more"
         android:foreground="?attr/selectableItemBackground"
+        android:text="@string/know_more"
         android:textColor="@color/gray"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="@id/offersRV"
@@ -195,8 +192,8 @@
         android:drawableEnd="@drawable/baseline_arrow_forward_24"
         android:elevation="5dp"
         android:focusable="true"
-        android:foreground="?attr/selectableItemBackground"
         android:fontFamily="@font/poppins_semibold"
+        android:foreground="?attr/selectableItemBackground"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
         android:text="@string/be_prime"
