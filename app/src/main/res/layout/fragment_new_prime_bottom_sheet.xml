@@ -25,12 +25,12 @@
         android:id="@+id/shapeAbleImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.41"
         android:layout_marginTop="45dp"
         android:scaleType="fitXY"
         android:src="@drawable/img_1"
         app:layout_constraintBottom_toTopOf="@+id/bg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/roundedImageView" />
@@ -40,10 +40,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shapeAbleImageView"
-        app:layout_constraintBottom_toBottomOf="parent"
 
         />
 
@@ -71,10 +71,10 @@
         android:background="@drawable/divider"
         app:layout_constraintBottom_toTopOf="@id/offerCard"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.003"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/primeText"
-        app:layout_constraintWidth_percent="0.5"
-        app:layout_constraintHeight_percent="0.003"/>
+        app:layout_constraintWidth_percent="0.5" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/offerCard"
@@ -144,6 +144,7 @@
         app:drawableStartCompat="@drawable/offer"
         app:layout_constraintBottom_toTopOf="@id/offerText2"
         app:layout_constraintEnd_toEndOf="@id/offerCard"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/offerCard"
         app:layout_constraintTop_toBottomOf="@+id/offerCard" />
 
@@ -159,6 +160,9 @@
         android:textColor="@color/black"
         android:textSize="13sp"
         app:drawableStartCompat="@drawable/rupee"
+        app:layout_constraintBottom_toTopOf="@id/knowMore"
+        app:layout_constraintEnd_toEndOf="@id/offerText1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/offerText1"
         app:layout_constraintTop_toBottomOf="@id/offerText1" />
 
@@ -186,8 +190,8 @@
         android:layout_marginVertical="15dp"
         android:backgroundTint="@color/white"
         android:clickable="true"
-        android:focusable="true"
         android:fontFamily="@font/poppins_semibold"
+        android:paddingVertical="10dp"
         android:text="@string/skip_amp_book"
         android:textAlignment="center"
         android:textColor="@color/orange"
@@ -212,17 +216,20 @@
         android:clickable="true"
         android:drawableEnd="@drawable/baseline_arrow_forward_24"
         android:elevation="5dp"
+        android:paddingHorizontal="10dp"
         android:focusable="true"
+        app:layout_constraintBaseline_toBaselineOf="@id/skipAndBook"
         android:fontFamily="@font/poppins_semibold"
+        android:paddingVertical="10dp"
         android:text="@string/be_prime"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@id/bg"
+        app:layout_constraintBottom_toBottomOf="@id/skipAndBook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/skipAndBook"
-        app:layout_constraintTop_toBottomOf="@id/knowMore"
+        app:layout_constraintTop_toTopOf="@id/skipAndBook"
         app:layout_constraintVertical_bias="0" />
 
 
