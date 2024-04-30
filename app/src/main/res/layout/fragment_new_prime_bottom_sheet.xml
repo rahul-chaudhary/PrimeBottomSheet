@@ -129,42 +129,18 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:id="@+id/offerText1"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/offersRV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:drawablePadding="5dp"
-        android:fontFamily="@font/poppins_regular"
-        android:paddingVertical="5dp"
-        android:text="@string/save_at_least_400_in_every_booking"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:drawableStartCompat="@drawable/offer"
-        app:layout_constraintBottom_toTopOf="@id/offerText2"
+        app:layout_constraintBottom_toTopOf="@id/knowMore"
         app:layout_constraintEnd_toEndOf="@id/offerCard"
+        android:layout_marginTop="20dp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/offerCard"
-        app:layout_constraintTop_toBottomOf="@+id/offerCard" />
+        app:layout_constraintTop_toBottomOf="@+id/offerCard"
+        />
 
-    <TextView
-        android:id="@+id/offerText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawablePadding="5dp"
-        android:fontFamily="@font/poppins_regular"
-        android:paddingVertical="5dp"
-        android:text="@string/recover_prime_fee_in_first_booking_itself"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:drawableStartCompat="@drawable/rupee"
-        app:layout_constraintBottom_toTopOf="@id/knowMore"
-        app:layout_constraintEnd_toEndOf="@id/offerText1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/offerText1"
-        app:layout_constraintTop_toBottomOf="@id/offerText1" />
 
     <TextView
         android:id="@+id/knowMore"
@@ -177,9 +153,9 @@
         android:text="@string/know_more"
         android:textColor="@color/gray"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@id/offerText2"
-        app:layout_constraintStart_toStartOf="@id/offerText2"
-        app:layout_constraintTop_toBottomOf="@id/offerText2" />
+        app:layout_constraintEnd_toEndOf="@id/offersRV"
+        app:layout_constraintStart_toStartOf="@id/offersRV"
+        app:layout_constraintTop_toBottomOf="@id/offersRV" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/skipAndBook"
