@@ -16,7 +16,16 @@ object DummyOfferData {
             OfferModel(
                 AppCompatResources.getDrawable(context, R.drawable.rupee),
                 context.getString(R.string.recover_prime_fee_in_first_booking_itself)
-            )
+            ),
+            OfferModel(
+                AppCompatResources.getDrawable(context, R.drawable.offer) ,
+                context.getString(R.string.save_at_least_400_in_every_booking)
+            ),
+            OfferModel(
+                AppCompatResources.getDrawable(context, R.drawable.rupee),
+                context.getString(R.string.recover_prime_fee_in_first_booking_itself)
+            ),
+
         )
     }
 

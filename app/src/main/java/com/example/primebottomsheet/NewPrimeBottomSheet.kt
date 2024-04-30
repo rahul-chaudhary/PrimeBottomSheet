@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.primebottomsheet.adapter.OfferAdapter
 import com.example.primebottomsheet.databinding.FragmentNewPrimeBottomSheetBinding
@@ -20,9 +21,23 @@ class NewPrimeBottomSheet : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentNewPrimeBottomSheetBinding.inflate(inflater, container, false)
+        //offer Recycler View
         val offersRV = binding.offersRV
         offersRV.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         offersRV.adapter = OfferAdapter(fetchOfferTextData())
+        //Skip and book onClickListener
+        binding.skipAndBook.setOnClickListener {
+            Toast.makeText(context, "Skip and Book Button Clicked", Toast.LENGTH_SHORT).show()
+            dismiss()
+        }
+        //Be Prime Button
+        binding.bePrimeBtn.setOnClickListener {
+            Toast.makeText(context, "Be Prime Button Clicked", Toast.LENGTH_SHORT).show()
+        }
+        //know more TextView
+        binding.knowMore.setOnClickListener {
+            Toast.makeText(context, "Know More TextView Clicked", Toast.LENGTH_SHORT).show()
+        }
 
         return binding.root
 
