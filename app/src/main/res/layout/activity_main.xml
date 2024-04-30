@@ -10,13 +10,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bottomSheetLauncher"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/be_prime_gradient_btn"
         android:fontFamily="@font/poppins_medium"
-        android:paddingHorizontal="10dp"
         android:text="@string/old_bottom_sheet"
         android:textAllCaps="false"
+        android:layout_marginHorizontal="10dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/barrier"
@@ -25,7 +25,7 @@
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,12 +37,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/newBottomSheetLauncher"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         android:background="@drawable/be_prime_gradient_btn"
         android:fontFamily="@font/poppins_medium"
         android:textAllCaps="false"
-        android:paddingHorizontal="10dp"
         android:text= "@string/new_bottom_sheet"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

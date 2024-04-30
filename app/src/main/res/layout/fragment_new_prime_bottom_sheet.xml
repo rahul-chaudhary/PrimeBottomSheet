@@ -1,212 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-    tools:context=".NewPrimeBottomSheet">
+    android:layout_height="wrap_content">
 
 
-    <ImageView
-        android:id="@+id/primeCircle"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:contentDescription="@string/prime_icon"
-        android:elevation="10dp"
-        android:src="@drawable/crown_ic"
-        app:layout_constraintBottom_toTopOf="@id/shapeAbleImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/shapeAbleImageView" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/shapeAbleImageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="45dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/img_1"
-        app:layout_constraintBottom_toTopOf="@+id/bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.38"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/roundedImageView" />
-
-    <View
-        android:id="@+id/bg"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shapeAbleImageView"
-
-        />
-
-    <TextView
-        android:id="@+id/primeText"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center"
-        android:text="@string/extra_10_off_nwith_prime"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/primeCircle" />
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        tools:context=".NewPrimeBottomSheet">
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:background="@drawable/divider"
-        app:layout_constraintBottom_toTopOf="@id/offerCard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/primeText"
-        app:layout_constraintVertical_bias="0.3"
-        app:layout_constraintWidth_percent="0.5" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/offerCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/orange"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="6dp"
-        app:layout_constraintBottom_toBottomOf="@id/shapeAbleImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/shapeAbleImageView"
-        app:layout_constraintWidth_percent="0.7"
-        app:strokeWidth="0dp">
+        <ImageView
+            android:id="@+id/primeCircle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/prime_icon"
+            android:elevation="10dp"
+            android:src="@drawable/crown_ic"
+            app:layout_constraintBottom_toTopOf="@id/shapeAbleImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shapeAbleImageView" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top"
-            android:layout_marginVertical="8dp"
-            android:fontFamily="@font/poppins_regular"
-            android:text="@string/only_at_rs_58_week"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeAbleImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="45dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_1"
+            app:layout_constraintBottom_toTopOf="@+id/bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/planCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_marginTop="35dp"
-
-            app:cardBackgroundColor="@color/cream_orange"
-            app:cardCornerRadius="15dp"
+        <View
+            android:id="@+id/bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shapeAbleImageView"
+
+            />
+
+        <TextView
+            android:id="@+id/primeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="@string/extra_10_off_nwith_prime"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/primeCircle" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            app:layout_constraintBottom_toTopOf="@id/offerCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/primeText"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/offerCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/orange"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toBottomOf="@id/shapeAbleImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shapeAbleImageView"
+            app:layout_constraintWidth_percent="0.7"
             app:strokeWidth="0dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginVertical="10dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/_1_month_plan_n_rs_245"
+                android:layout_gravity="center|top"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/only_at_rs_58_week"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/planCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginTop="35dp"
+
+                app:cardBackgroundColor="@color/cream_orange"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/_1_month_plan_n_rs_245"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </com.google.android.material.card.MaterialCardView>
+
         </com.google.android.material.card.MaterialCardView>
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/offersRV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toTopOf="@id/knowMore"
-        app:layout_constraintEnd_toEndOf="@id/offerCard"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/offerCard"
-        app:layout_constraintTop_toBottomOf="@+id/offerCard" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/offersRV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@id/knowMore"
+            app:layout_constraintEnd_toEndOf="@id/offerCard"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/offerCard"
+            app:layout_constraintTop_toBottomOf="@+id/offerCard" />
 
 
-    <TextView
-        android:id="@+id/knowMore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/poppins_regular"
-        android:foreground="?attr/selectableItemBackground"
-        android:text="@string/know_more"
-        android:textColor="@color/gray"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@id/offersRV"
-        app:layout_constraintStart_toStartOf="@id/offersRV"
-        app:layout_constraintTop_toBottomOf="@id/offersRV" />
+        <TextView
+            android:id="@+id/knowMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/know_more"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/offersRV"
+            app:layout_constraintStart_toStartOf="@id/offersRV"
+            app:layout_constraintTop_toBottomOf="@id/offersRV" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/skipAndBook"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="15dp"
-        android:backgroundTint="@color/white"
-        android:clickable="true"
-        android:focusable="true"
-        android:fontFamily="@font/poppins_semibold"
-        android:foreground="?attr/selectableItemBackground"
-        android:paddingVertical="10dp"
-        android:text="@string/skip_amp_book"
-        android:textAlignment="center"
-        android:textColor="@color/orange"
-        android:textSize="18sp"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="@id/bg"
-        app:layout_constraintEnd_toStartOf="@id/bePrimeBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/knowMore"
-        app:layout_constraintVertical_bias="0"
-        app:strokeColor="@color/light_gray"
-        app:strokeWidth="1.5dp" />
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bePrimeBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="15dp"
-        android:background="@drawable/be_prime_gradient_btn"
-        android:clickable="true"
-        android:drawableEnd="@drawable/baseline_arrow_forward_24"
-        android:elevation="5dp"
-        android:focusable="true"
-        android:fontFamily="@font/poppins_semibold"
-        android:foreground="?attr/selectableItemBackground"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="10dp"
-        android:text="@string/be_prime"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@id/skipAndBook"
-        app:layout_constraintBottom_toBottomOf="@id/skipAndBook"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/skipAndBook"
-        app:layout_constraintTop_toTopOf="@id/skipAndBook"
-        app:layout_constraintVertical_bias="0" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/skipAndBook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="15dp"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingVertical="10dp"
+            android:text="@string/skip_amp_book"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/bg"
+            app:layout_constraintEnd_toStartOf="@id/bePrimeBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/knowMore"
+            app:layout_constraintVertical_bias="0"
+            app:strokeColor="@color/light_gray"
+            app:strokeWidth="1.5dp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bePrimeBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/be_prime_gradient_btn"
+            android:clickable="true"
+            android:drawableEnd="@drawable/baseline_arrow_forward_24"
+            android:elevation="5dp"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:text="@string/be_prime"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/skipAndBook"
+            app:layout_constraintBottom_toBottomOf="@id/skipAndBook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/skipAndBook"
+            app:layout_constraintTop_toTopOf="@id/skipAndBook"
+            app:layout_constraintVertical_bias="0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
