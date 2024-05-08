@@ -22,9 +22,8 @@ class NewPrimeBottomSheet : BottomSheetDialogFragment() {
     ): View {
         binding = FragmentNewPrimeBottomSheetBinding.inflate(inflater, container, false)
         //offer Recycler View
-        val offersRV = binding.offersRV
-        offersRV.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        offersRV.adapter = OfferAdapter(fetchOfferTextData())
+        binding.offersRV.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.offersRV.adapter = OfferAdapter(fetchOfferTextData())
         //Skip and book onClickListener
         binding.skipAndBook.setOnClickListener {
             Toast.makeText(context, "Skip and Book Button Clicked", Toast.LENGTH_SHORT).show()
