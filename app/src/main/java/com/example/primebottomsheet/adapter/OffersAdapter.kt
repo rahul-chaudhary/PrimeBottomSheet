@@ -9,8 +9,8 @@ import com.example.primebottomsheet.model.OfferModel
 
 class OfferAdapter(private val items: ArrayList<OfferModel>): RecyclerView.Adapter<OfferViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfferViewHolder {
-        val view = View.inflate(parent.context, R.layout.offer_item, null)
-        return OfferViewHolder(view)
+
+        return OfferViewHolder(View.inflate(parent.context, R.layout.offer_item, null))
     }
 
     override fun getItemCount(): Int {

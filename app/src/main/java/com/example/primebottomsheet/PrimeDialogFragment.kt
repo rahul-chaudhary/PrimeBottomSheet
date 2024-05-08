@@ -21,7 +21,6 @@ class PrimeDialogFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = BottomsheetFragmentDialogBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 
