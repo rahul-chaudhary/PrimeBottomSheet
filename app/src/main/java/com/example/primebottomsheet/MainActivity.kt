@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.newBottomSheetLauncher.setOnClickListener {
             //conditional check to avoid multiple instances of the bottom sheet hence preventing the crashing of the app
-            if (!bottomSheetFragment.isAdded) {
+            if (!newPrimeBottomSheet.isAdded) {
                 Toast.makeText(it.context, "New Bottom Sheet Clicked", Toast.LENGTH_SHORT).show()
                 newPrimeBottomSheet.show(supportFragmentManager, newPrimeBottomSheet.tag)
             }
